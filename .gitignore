@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+.env
+.python-version
+
+# 翻译/脚本生成的缓存（可删掉后由脚本重建，且体积易膨胀）
+*.translate_cache.json
+*translate_cache.json
+*optics*cache*.json
+*_layout*.cache.json
+*.translate_timing.json
+
+# 原书与导出 PDF 体积大，默认不跟踪；若要纳入：git add -f "某文件.pdf"
+*.pdf

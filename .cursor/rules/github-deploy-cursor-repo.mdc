@@ -1,0 +1,26 @@
+---
+description: Push and deploy from Cursor to GitHub repo kalioashroy-spec/cursor
+alwaysApply: true
+---
+
+# Deploy to GitHub — kalioashroy-spec/cursor
+
+Canonical repository: [kalioashroy-spec/cursor](https://github.com/kalioashroy-spec/cursor)  
+Default branch: `main` (see [branches](https://github.com/kalioashroy-spec/cursor/branches)).
+
+## Remote
+
+- Prefer **`origin`** → `https://github.com/kalioashroy-spec/cursor.git` (SSH `git@github.com:kalioashroy-spec/cursor.git` if the user uses SSH).
+- If `origin` is missing or wrong, add or set it with `git remote add` / `git remote set-url` only for this repo; **never** change global Git config.
+
+## When the user asks to deploy, sync, or push
+
+1. Confirm clean or intentional changes: `git status`.
+2. **Commits:** Create commits **only if the user explicitly asked** to commit; follow the repo’s existing message style.
+3. **Push:** `git push -u origin <branch>` when on a feature branch; for `main`, use normal `git push origin main` — **no `push --force` to `main`/`master`** unless the user explicitly requests it (and warn about risks).
+4. **Do not** commit secrets (`.env`, keys, large binary PDFs unless the user asks). Respect `.gitignore`.
+5. Prefer **`gh`** for GitHub tasks (issues, PRs, checks) when the user’s rules mention `gh`.
+
+## If this folder is not the same as the clone
+
+This rule names the **target** repo. If the workspace is only a subproject, push from the actual clone root or adjust paths; still use the remote above when the goal is “deploy to my cursor repo.”
